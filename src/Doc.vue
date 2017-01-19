@@ -23,14 +23,14 @@
     data: function () {
       return {
         time: null,
-        name: 'bz-login',
+        name: 'bz-timepicer',
         desc: '登录页面',
         parms: [
           {parm: 'v-model', desc: '绑定时间'},
           {parm: 'hide_clear_button', desc: '隐藏清除按钮(只要有就生效)'}
         ],
         parm_desc: ``,
-        code: `<bz v-on:check_done="call_back"></bz>`
+        code: `<bz hide_clear_button v-model="time" ></bz>`
       }
     },
     methods: {
