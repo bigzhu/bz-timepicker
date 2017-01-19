@@ -1,5 +1,5 @@
 <template>
-  <vue-timepicker :hide-clear-button="hide_clear_button" :v-model="time" @change="change" :minute-interval="10"></vue-timepicker>
+  <vue-timepicker :hide-clear-button="hide_clear_button" v-model="time" @change="change" :minute-interval="10"></vue-timepicker>
 </template>
 
 <script>
@@ -37,10 +37,12 @@
       }
     },
     mounted: function () {
+      if (this.value) {
+        this.time = this.value
+      }
       this.$nextTick(function () {
         // code that assumes this.$el is in-document
       })
-      this.time = this.value // value 已赋值好时，在这里同步
     },
     methods: {
       change: function (val) {
