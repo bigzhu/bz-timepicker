@@ -1,6 +1,6 @@
 {
   "name": "bz-timepicker",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "bz-timepicker",
   "main": "src/Bz.vue",
   "keywords": [
