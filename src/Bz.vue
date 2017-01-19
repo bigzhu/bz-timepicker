@@ -1,5 +1,5 @@
 <template>
-  <vue-timepicker v-model="time" @change="change" :minute-interval="10"></vue-timepicker>
+  <vue-timepicker :hide-clear-button="hide_clear_button" :v-model="time" @change="change" :minute-interval="10"></vue-timepicker>
 </template>
 
 <script>
@@ -19,6 +19,9 @@
       value: {
         type: Object,
         requried: true
+      },
+      hide_clear_button: {
+        default: null
       }
     },
     components: {

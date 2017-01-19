@@ -6,7 +6,7 @@
       :parms="parms"
       :code="code"
       >
-      <bz v-model="time" ></bz>
+      <bz hide_clear_button v-model="time" ></bz>
     </doc>
   </div>
 </template>
@@ -26,10 +26,8 @@
         name: 'bz-login',
         desc: '登录页面',
         parms: [
-          {parm: 'check_done', desc: 'v-on 绑定 check_done 事件，完成了用户名密码必填的check'},
-          {parm: 'user_name_placeholder', desc: '可选'},
-          {parm: 'password_placeholder', desc: '可选'},
-          {parm: 'loading', desc: '控制按钮loading效果(可选)'}
+          {parm: 'v-model', desc: '绑定时间'},
+          {parm: 'hide_clear_button', desc: '隐藏清除按钮(只要有就生效)'}
         ],
         parm_desc: ``,
         code: `<bz v-on:check_done="call_back"></bz>`
