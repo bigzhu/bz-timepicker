@@ -50,8 +50,8 @@
         time.HH = val.data.HH
         time.mm = val.data.mm
         time.ss = val.data.ss
-        if (time.HH === '' && time.mm === '') return // 初始化时不要影响到原数据
-        this.$emit('input', time)
+        // if (time.HH === '' && time.mm === '') return // 初始化时不要影响到原数据
+        this.$emit('input', val.data)
       }
     }
   }
